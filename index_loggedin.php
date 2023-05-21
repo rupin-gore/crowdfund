@@ -27,7 +27,7 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Navigation Bar -->
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index_loggedin.html">Home</a></li>
             <li><a href="campaigns.html">Campaigns</a></li>
             <li><a href="create_campaign.html">Start a Campaign</a></li>
             <li><a href="benefits.html">Benefits</a></li>
