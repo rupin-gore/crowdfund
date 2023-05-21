@@ -3,7 +3,7 @@
 
 // Check if the user is already logged in
 session_start();
-if (isset($_SESSION['user_id'])) {
+if (isset($_SESSION['rg'])) {
   // Redirect the user to the logged-in version of index.php
   header("Location: index_logged_in.php");
   exit();

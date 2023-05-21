@@ -34,13 +34,8 @@ if (!isset($_SESSION['user_id'])) {
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact us</a></li>
             <?php if (isset($_SESSION['username'])) : ?>
-                <li class="navbar-profile">
-                    <a href="#"><i class="fas fa-user"></i> <?php echo $firstName . ' ' . $lastName; ?></a>
-                    <ul class="navbar-dropdown">
                         <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
-                    </ul>
-                </li>
             <?php else : ?>
                 <li class="navbar-btns">
                     <a href="login/login.php" class="btn-login">Login To Your Fundraiser</a>
