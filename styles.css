@@ -95,16 +95,23 @@ header img {
 .key-points {
     display: flex;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    font-weight: 500;
 }
 
 .point {
-    flex-basis: 30%;
+    flex-basis: 40%;
     padding: 20px;
     background-color: #f7f7f7;
     text-align: center;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    margin: 60px;
+}
+
+.point:hover {
+    transform: scale(1.07);
+    cursor: pointer;
 }
 
 .point h3 {
