@@ -1,3 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to right, #70be87, #3ba672);
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar {
+    background-color: transparent;
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .navbar.scrolled {
+    background-color: #fff;
+  }
+
 /* Styles for header.html */
 
 header {
