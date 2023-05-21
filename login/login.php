@@ -17,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Connect to the database
   $servername = "localhost";
-  $username = "your_username";
-  $password = "your_password";
-  $database = "your_database";
+  $username = "username";
+  $password = "123";
+  $database = "crowdfund";
   
   $conn = new mysqli($servername, $username, $password, $database);
   

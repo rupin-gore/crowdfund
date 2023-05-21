@@ -19,11 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Connect to the database
   $servername = "localhost";
-  $username = "your_username";
-  $password = "your_password";
-  $database = "your_database";
+  $username = "username";
+  $db_password = "123";
+  $database = "crowdfund";
   
-  $conn = new mysqli($servername, $username, $password, $database);
+  $conn = new mysqli($servername, $username, $db_password, $database);
   
   // Check connection
   if ($conn->connect_error) {
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>Sign Up</h2>
       </div>
       <div class="signup-card">
-        <form action="process_signup.php" method="POST">
+        <form action="signup.php" method="POST">
           <div class="form-group">
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required>
