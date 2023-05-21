@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GoFundMe Clone - Home</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Link to external JavaScript file -->
+  <script src="script.js"></script>
+  <style>
+   /* Styles for the page content */
+   .campaigns {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .campaign {
+     width: 80%;
+     max-width: 800px;
+     margin: 20px 0;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+   }
+
+   .campaign h2 {
+     margin: 0 0 10px 0;
+   }
+
+   .campaign p {
+     margin: 10px 0;
+   }
+ </style>
+</head>
+<body>
+ <header class="header">
+  <img src="logo.png" alt="My Website Logo">
+</header>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+   <ul>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="campaigns.html">Campaigns</a></li>
+     <li><a href="create_campaign.html">Start a Campaign</a></li>
+     <li><a href="benefits.html">Benefits</a></li>
+     <li><a href="about.html">About</a></li>
+     <li><a href="contact.html">Contact us</a></li>
+     <li class="navbar-btns">
+       <a href="login.html" class="btn-login">Login To Your Fundraiser</a>
+       <a href="signup.html" class="btn-signup">Sign Up</a>
+     </li>
+   </ul>
+ </nav>
+  <!-- Main content -->
+  <main>
+   <div class="campaigns">
+    <div class="campaign">
+      <h2>Campaign Title 1</h2>
+      <p>Description of campaign 1.</p>
+      <a href="donation.html">Donate Now</a>
+    </div>
+    <div class="campaign">
+      <h2>Campaign Title 2</h2>
+      <p>Description of campaign 2.</p>
+      <a href="#">Donate Now</a>
+    </div>
+    <div class="campaign">
+      <h2>Campaign Title 3</h2>
+      <p>Description of campaign 3.</p>
+      <a href="#">Donate Now</a>
+    </div>
+    <!-- More campaigns can be added here -->
+  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+   <div class="footer-links">
+     <ul>
+       <li><a href="">About</a></li>
+       <li><a href="">Services</a></li>
+       <li><a href="">Pricing</a></li>
+       <li><a href="">Blog</a></li>
+       <li><a href="">Contact</a></li>
+     </ul>
+   </div>
+   <div class="footer-social">
+     <h4>Follow Us</h4>
+     <ul>
+       <li><img src="images/fb.png"><i class="fab fa-facebook"></i></a></li>
+       <li><img src="images/fb.png"><i class="fab fa-twitter"></i></a></li>
+       <li><img src="images/fb.png"><i class="fab fa-instagram"></i></a></li>
+       <li><img src="images/fb.png"><i class="fab fa-linkedin"></i></a></li>
+     </ul>
+   </div>
+   <div class="footer-legal">
+     <p>&copy; 2023 Example Company. All rights reserved.</p>
+     <p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a></p>
+   </div>
+ </footer>
+</body>
+</html>
