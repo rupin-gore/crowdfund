@@ -27,7 +27,7 @@ if (isset($_SESSION['loggedIn'])) {
   <ul>
     <li><a href="index.php">Home</a></li>
     <li><a href="campaigns.php">Campaigns</a></li>
-    <li><a href="createcampaign/create_campaign.php">Start a Campaign</a></li>
+    <li><a href="create_campaign.php">Start a Campaign</a></li>
     <li><a href="about.php">About</a></li>
     <li><a href="contact.php">Contact us</a></li>
     <?php
@@ -45,8 +45,8 @@ if (isset($_SESSION['loggedIn'])) {
        else {
         echo '
           <li class="navbar-btns">
-            <a href="login/login.php" class="btn-login">Login</a>
-            <a href="signup/signup.php" class="btn-signup">Sign Up</a>
+            <a href="login.php" class="btn-login">Login</a>
+            <a href="signup.php" class="btn-signup">Sign Up</a>
           </li>
         ';
       }
@@ -62,7 +62,7 @@ if (isset($_SESSION['loggedIn'])) {
             <h2>Start a Fundraiser</h2>
         </div>
         <div>
-            <h2>What to expect?</h2>
+            <h2>What to expect</h2>
             <div>
                 <h1>Fundraising on FundSpring<br>takes just a few minutes</h1>
                 <div class="key-points">
