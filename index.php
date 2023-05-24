@@ -3,17 +3,15 @@
 
 // Check if the user is already logged in
 session_start();
-if (isset($_SESSION['rg'])) {
-  // Redirect the user to the logged-in version of index.php
-  header("Location: index_logged_in.php");
-  exit();
-}
+if (isset($_SESSION['loggedIn'])) {
+    // User is already logged in
+    // You can redirect to a different page or display a different message if needed
+  }
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>GoFundMe Clone - Home</title>
+    <title>FundSpring - Home</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
@@ -26,39 +24,47 @@ if (isset($_SESSION['rg'])) {
     </header>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="campaigns.html">Campaigns</a></li>
-            <li><a href="create_campaign.html">Start a Campaign</a></li>
-            <li><a href="benefits.html">Benefits</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-            <?php if (isset($_SESSION['username'])) : ?>
-                <li class="navbar-profile">
-                    <a href="#"><i class="fas fa-user"></i> <?php echo $firstName . ' ' . $lastName; ?></a>
-                    <ul class="navbar-dropdown">
-                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
-                        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
-                    </ul>
-                </li>
-            <?php else : ?>
-                <li class="navbar-btns">
-                    <a href="login/login.php" class="btn-login">Login To Your Fundraiser</a>
-                    <a href="signup/signup.php" class="btn-signup">Sign Up</a>
-                </li>
-            <?php endif; ?>
-        </ul>
-    </nav>
+  <ul>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="campaigns.php">Campaigns</a></li>
+    <li><a href="create_campaign.php">Start a Campaign</a></li>
+    <li><a href="about.php">About</a></li>
+    <li><a href="contact.php">Contact us</a></li>
+    <?php
+      $isLoggedIn = isset($_SESSION['loggedIn']);
+
+      if ($isLoggedIn) {
+        $userEmail = $_SESSION['loggedIn'];
+        echo '
+          <li class="navbar-btns">
+            <a href="profile.php" class="btn-profile"><i class="fas fa-user"></i></a>
+            <a href="logout.php" class="btn-logout">Sign Out</a>
+          </li>
+        ';
+      }
+       else {
+        echo '
+          <li class="navbar-btns">
+            <a href="login.php" class="btn-login">Login</a>
+            <a href="signup.php" class="btn-signup">Sign Up</a>
+          </li>
+        ';
+      }
+    ?>
+  </ul>
+</nav>
     <!-- Main content -->
     <main>
+        <br>
+        <br>
         <div align="center">
-            <h1 textsize="big">A Little Help Can Change the World</h1>
+            <h1 textsize="big">"A Little Help Can Change the World"</h1>
             <h2>Start a Fundraiser</h2>
         </div>
         <div>
             <h2>What to expect</h2>
             <div>
-                <h1>Fundraising on GoFundMe<br>takes just a few minutes</h1>
+                <h1>Fundraising on FundSpring<br>takes just a few minutes</h1>
                 <div class="key-points">
                     <div class="point">
                         <h3>Step 1</h3>
@@ -71,47 +77,6 @@ if (isset($_SESSION['rg'])) {
                     <div class="point">
                         <h3>Step 3</h3>
                         <p><b>Share with friends and family</b><br> People out there want to help you.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h2>Where you can help</h2>
-            <div>
-                <h1>Trending Campaigns</h1>
-                <div class="catalog-container">
-                    <div class="catalog">
-                        <div class="card">
-                            <img src="https://via.placeholder.com/300x250.png" alt="Product Image">
-                            <h2>Product Title</h2>
-                            <p>Description of the product goes here.</p>
-                            <button>Buy Now</button>
-                        </div>
-                        <div class="card">
-                            <img src="https://via.placeholder.com/300x250.png" alt="Product Image">
-                            <h2>Product Title</h2>
-                            <p>Description of the product goes here.</p>
-                            <button>Buy Now</button>
-                        </div>
-                        <div class="card">
-                            <img src="https://via.placeholder.com/300x250.png" alt="Product Image">
-                            <h2>Product Title</h2>
-                            <p>Description of the product goes here.</p>
-                            <button>Buy Now</button>
-                        </div>
-                        <div class="card">
-                            <img src="https://via.placeholder.com/300x250.png" alt="Product Image">
-                            <h2>Product Title</h2>
-                            <p>Description of the product goes here.</p>
-                            <button>Buy Now</button>
-                        </div>
-                        <div class="card">
-                            <img src="https://via.placeholder.com/300x250.png" alt="Product Image">
-                            <h2>Product Title</h2>
-                            <p>Description of the product goes here.</p>
-                            <button>Buy Now</button>
-                        </div>
-                        <!-- Add more cards here -->
                     </div>
                 </div>
             </div>

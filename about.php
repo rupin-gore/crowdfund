@@ -15,29 +15,35 @@
     </header>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="campaigns.html">Campaigns</a></li>
-            <li><a href="create_campaign.html">Start a Campaign</a></li>
-            <li><a href="benefits.html">Benefits</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-            <?php if (isset($_SESSION['username'])) : ?>
-                <li class="navbar-profile">
-                    <a href="#"><i class="fas fa-user"></i> <?php echo $firstName . ' ' . $lastName; ?></a>
-                    <ul class="navbar-dropdown">
-                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
-                        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
-                    </ul>
-                </li>
-            <?php else : ?>
-                <li class="navbar-btns">
-                    <a href="login/login.php" class="btn-login">Login To Your Fundraiser</a>
-                    <a href="signup/signup.php" class="btn-signup">Sign Up</a>
-                </li>
-            <?php endif; ?>
-        </ul>
-    </nav>
+  <ul>
+    <li><a href="home.php">Home</a></li>
+    <li><a href="campaigns.php">Campaigns</a></li>
+    <li><a href="create_campaign.php">Start a Campaign</a></li>
+    <li><a href="about.php">About</a></li>
+    <li><a href="contact.php">Contact us</a></li>
+    <?php
+      session_start();
+      $isLoggedIn = isset($_SESSION['loggedIn']);
+
+      if ($isLoggedIn) {
+        $userEmail = $_SESSION['loggedIn'];
+        echo '
+          <li class="navbar-btns">
+            <a href="profile.php" class="btn-profile"><i class="fas fa-user"></i></a>
+            <a href="logout.php" class="btn-logout">Sign Out</a>
+          </li>
+        ';
+      } else {
+        echo '
+          <li class="navbar-btns">
+            <a href="login.php" class="btn-login">Login</a>
+            <a href="signup.php" class="btn-signup">Sign Up</a>
+          </li>
+        ';
+      }
+    ?>
+  </ul>
+</nav>
     <!-- Main content -->
     <main>
      <section>
