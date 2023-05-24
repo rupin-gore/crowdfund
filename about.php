@@ -7,6 +7,47 @@
     <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <style>
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+ol, ul {
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+
+li {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+strong {
+  font-weight: bold;
+}
+    </style>
 </head>
 
 <body>
@@ -46,6 +87,8 @@
 </nav>
     <!-- Main content -->
     <main>
+      <br>
+      <br>
      <section>
        <h2>What is Crowdfunding?</h2>
        <p>Crowdfunding is a way for individuals, organizations, and businesses to raise funds for various projects, causes, or ventures by collecting small contributions from a large number of people, typically through an online platform.</p>
