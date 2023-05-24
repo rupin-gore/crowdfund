@@ -18,12 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Validate form data (you can add more validation as per your requirements)
 
   // Connect to the database
-  $servername = "localhost";
-  $username = "username";
-  $db_password = "123";
-  $database = "crowdfund";
-  
-  $conn = new mysqli($servername, $username, $db_password, $database);
+  $conn =mysqli_connect("localhost","root","")or die ("error");
+  $db =mysqli_select_db($conn,"crowdfund");
   
   // Check connection
   if ($conn->connect_error) {
@@ -35,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if ($conn->query($sql) === TRUE) {
     // Registration successful
     $_SESSION['username'] = $email; // Set session variable
-    header("Location: index.php"); // Redirect to homepage or user profile page
+    header("Location: ../index.php"); // Redirect to homepage or user profile page
     exit();
   } else {
     // Registration failed
